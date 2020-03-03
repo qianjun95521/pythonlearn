@@ -5,10 +5,12 @@ class UrlManager(object):
         self.old_urls=set()
 
     def has_new_url(self):
-        return len(self.)
+        return self.new_url_size()!=0
 
     def get_new_url(self):
-        return
+        new_url=self.new_urls.pop()
+        self.old_urls.add(new_url)
+        return new_url
 
     def add_new_url(self,url):
         if url is None:
